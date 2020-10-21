@@ -6,7 +6,7 @@ import * as cors from "cors";
 import * as session from "express-session";
 
 // ***** Routing *****
-import { userRouting } from "./controllers/users/index.routing"
+import { userRouting } from "./controllers/auth/index.routing"
 
 dotenv.config();
 
