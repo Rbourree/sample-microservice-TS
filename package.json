@@ -14,7 +14,11 @@
 	},
 	"scripts": {
 		"start": "cross-env NODE_ENV=production node .",
-		"dev": "cross-env NODE_ENV=development NODE_PATH=src nodemon -e ts -w src -x ts-node src/server.ts"
+		"nodemon": "cross-env NODE_ENV=development NODE_PATH=src nodemon -e ts -w src -x ts-node src/server.ts",
+		"local:build": "./scripts/docker-build.sh",
+		"local:run": "./scripts/docker-run.sh",
+		"dev": "docker-compose -f ./scripts/docker-compose.yml up -d && npm run local:build && npm run local:run"
+
 	},
 	"dependencies": {
 		"@types/cors": "^2.8.8",

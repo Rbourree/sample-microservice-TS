@@ -27,6 +27,6 @@ app.use(session({
 // ***** Start Server *****
 module.exports = app.listen(port, () => {
 	userRouting(app);
-	console.log('Microservice %s listening on', process.env.SERVICE_NAME, port)
+	console.log('Microservice listening on', port)
 	// postgres.authenticate();
 });
